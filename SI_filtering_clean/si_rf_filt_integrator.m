@@ -173,12 +173,12 @@ function [ unitary,uni_hist,hist_time ] = si_rf_filt_integrator(opt_params,filte
                                                                 './TransferFunctionY0.mat',...
                                                                 freq,timeDelayX,timeDelayY);
     else
-        load('./TransferFunctionX_new.mat');
+        load('./TransferFunctionX_20180621.mat');
         timeDelayX = TransferFunctionX(20,3)/(2*pi*1e6);
-        load('./TransferFunctionY_new.mat');
+        load('./TransferFunctionY_20180621.mat');
         timeDelayY = TransferFunctionY(20,3)/(2*pi*1e6);
-        [transFuncFinalX,transFuncFinalY] = makeTransferFunctions_new( './TransferFunctionX_new.mat',...
-                                                                './TransferFunctionY_new.mat',...
+        [transFuncFinalX,transFuncFinalY] = makeTransferFunctions_new( './TransferFunctionX_20180621.mat',...
+                                                                './TransferFunctionY_20180621.mat',...
                                                                 freq,timeDelayX,timeDelayY);
     end
 
